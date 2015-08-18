@@ -6,7 +6,7 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/14 16:43:29 by ncoden            #+#    #+#             */
-/*   Updated: 2015/06/14 20:49:33 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/08/18 16:29:29 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static inline t_3dline	*env_create_line(t_3denv *env)
 
 	if (!(line = (t_3dline *)malloc(sizeof(t_3dline))))
 		return (NULL);
-	if (!(ft_3denvpush(env, line, T_3DLINE)))
+	if (!(ft_3denvpush(env, line)))
 	{
 		free(line);
 		return (NULL);

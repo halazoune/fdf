@@ -6,8 +6,20 @@
 #    By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/29 06:56:00 by ncoden            #+#    #+#              #
-#    Updated: 2015/06/14 22:17:49 by ncoden           ###   ########.fr        #
+#    Updated: 2015/08/18 16:44:48 by ncoden           ###   ########.fr        #
 #                                                                              #
+# **************************************************************************** #
+
+# DEPENDENCIES
+LIBFT_DIR = libs/libft
+LIBFT_A = libs/libft/libft.a
+
+LIBFT_GRAPHICS_DIR = libs/libft-graphics
+LIBFT_GRAPHICS_A = libs/libft-graphics/libft-graphics.a
+
+MINILIBX_DIR = libs/minilibx
+MINILIBX_A = libs/minilibx/libmlx.a
+
 # **************************************************************************** #
 
 NAME = fdf
@@ -23,21 +35,22 @@ LNK = gcc
 LNKFLAGS =	-framework OPENGL -framework AppKit
 
 # DIRECTORIES
-LIBDIR = .
 SRCDIR = src
 OBJDIR = obj
 INCDIR = \
 	includes\
-	libft/includes
+	$(LIBFT_DIR)/includes\
+	$(LIBFT_GRAPHICS_DIR)/includes\
 
 # SOURCES
-LIB = \
-	libft/libft.a
+LIBS = \
+	$(LIBFT_A)\
+	$(LIBFT_GRAPHICS_A)\
+	$(MINILIBX_A)
 SRC = \
 	main.c\
 	map.c\
-	env.c\
-
+	env.c
 
 # **************************************************************************** #
 
@@ -62,8 +75,6 @@ LOG_WHITE		= \033[1;37m
 .PHONY: all $(NAME) build clean fclean re dev
 .SILENT:
 
-LIBS = $(addprefix $(LIBDIR)/, $(LIB))
-
 SRC := $(filter $(addprefix %, $(EXTENSIONS)), $(SRC))
 SRCS = $(addprefix $(SRCDIR)/, $(SRC))
 OBJS = $(addprefix $(OBJDIR)/, $(addsuffix .o, $(basename $(SRC))))
@@ -76,7 +87,7 @@ INCS = $(addprefix -I , $(INCS_DIRS))
 all: $(NAME)
 $(NAME): build $(LIBS) $(OBJS)
 	echo "$(LOG_CLEAR)$(NAME)... $(LOG_YELLOW)assembling...$(LOG_NOCOLOR)$(LOG_UP)"
-	$(LNK) -o $(NAME) $(LIBS) $(OBJS) $(INCS) $(LNKFLAGS)
+	$(LNK) -o $(NAME) $(LIBS) $(OBJS) $(LNKFLAGS)
 	echo "$(LOG_CLEAR)$(NAME)... compiled $(LOG_GREEN)✓$(LOG_NOCOLOR)"
 build:
 	mkdir -p $(OBJDIR)
@@ -93,7 +104,7 @@ dev:
 	make
 	./$(NAME) maps/42.fdf
 
-$(LIBDIR)/%.a:
+%.a:
 	echo "$(LOG_CLEAR)$(NAME)... $(LOG_YELLOW)$@$(LOG_NOCOLOR)$(LOG_UP)"
 	make -s -C $(@D)
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
