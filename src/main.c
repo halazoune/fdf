@@ -6,23 +6,13 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/14 12:46:18 by ncoden            #+#    #+#             */
-/*   Updated: 2015/06/14 22:12:47 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/08/30 19:00:12 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include "libft-graphics.h"
 #include "fdf.h"
-	#include <stdio.h>
-
-int				loop_hook(t_3denv *env)
-{
-	env->cam->ang.x += ft_degtorad(1);
-	env->cam->ang.y += ft_degtorad(1);
-	env->cam->ang.z += ft_degtorad(1);
-	ft_3denvprint(env);
-	return (1);
-}
 
 int				main(int argc, char **argv)
 {
@@ -38,7 +28,6 @@ int				main(int argc, char **argv)
 		return (0);
 	if (!(env = init_env(map)))
 		return (0);
-	mlx_loop_hook(env->mlx, &loop_hook, env);
-	mlx_loop(env->mlx);
+	init_events(env);
 	return (0);
 }
