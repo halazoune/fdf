@@ -6,11 +6,15 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/14 13:10:25 by ncoden            #+#    #+#             */
-/*   Updated: 2015/06/14 19:55:42 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/08/30 18:52:53 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include <stdlib.h>
+#include "libft/basics/numbers.h"
+#include "libft/containers/list.h"
+#include "libft/utils/file.h"
+#include "libft/utils/parse.h"
 
 static inline int	map_line_count(char *line)
 {

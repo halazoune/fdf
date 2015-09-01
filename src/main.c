@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fcntl.h>
+#include "libft-graphics.h"
 #include "fdf.h"
 	#include <stdio.h>
 

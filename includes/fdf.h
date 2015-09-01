@@ -6,14 +6,13 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/14 12:45:11 by ncoden            #+#    #+#             */
-/*   Updated: 2015/08/18 16:29:00 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/08/30 18:49:10 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
 
-# include "libft.h"
 # include "libft-graphics.h"
 
 int					**init_map(int fd);
