@@ -6,7 +6,7 @@
 #    By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/29 06:56:00 by ncoden            #+#    #+#              #
-#    Updated: 2015/09/02 16:14:41 by ncoden           ###   ########.fr        #
+#    Updated: 2015/09/02 18:21:38 by ncoden           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ LNKFLAGS =	-framework OPENGL -framework AppKit
 SRCDIR = src
 OBJDIR = obj
 INCDIR = \
-	includes\
+	include\
 	$(LIBFT_H)\
 	$(LIBFT_GRAPHICS_H)\
 	$(MINILIBX_H)
