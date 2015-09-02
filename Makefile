@@ -6,19 +6,19 @@
 #    By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/29 06:56:00 by ncoden            #+#    #+#              #
-#    Updated: 2015/08/30 19:05:29 by ncoden           ###   ########.fr        #
+#    Updated: 2015/09/02 16:14:41 by ncoden           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # DEPENDENCIES
-LIBFT_DIR = libs/libft
 LIBFT_A = libs/libft/libft.a
+LIBFT_H = libs/libft/include
 
-LIBFT_GRAPHICS_DIR = libs/libft-graphics
 LIBFT_GRAPHICS_A = libs/libft-graphics/libft-graphics.a
+LIBFT_GRAPHICS_H = libs/libft-graphics/include
 
-MINILIBX_DIR = libs/minilibx
 MINILIBX_A = libs/minilibx/libmlx.a
+MINILIBX_H = libs/minilibx
 
 # **************************************************************************** #
 
@@ -39,8 +39,9 @@ SRCDIR = src
 OBJDIR = obj
 INCDIR = \
 	includes\
-	$(LIBFT_DIR)/includes\
-	$(LIBFT_GRAPHICS_DIR)/includes\
+	$(LIBFT_H)\
+	$(LIBFT_GRAPHICS_H)\
+	$(MINILIBX_H)
 
 # SOURCES
 LIBS = \

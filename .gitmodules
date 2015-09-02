@@ -1,11 +1,9 @@
 [submodule "libs/libft"]
 	path = libs/libft
 	url = https://github.com/ncoden/libft.git
-
 [submodule "libs/libft-graphics"]
 	path = libs/libft-graphics
 	url = https://github.com/ncoden/libft-graphics.git
-
 [submodule "libs/minilibx"]
 	path = libs/minilibx
 	url = https://github.com/ncoden/minilibx_macos.git

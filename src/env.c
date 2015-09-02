@@ -6,13 +6,13 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/14 16:43:29 by ncoden            #+#    #+#             */
-/*   Updated: 2015/08/30 18:46:50 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/09/02 16:01:45 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft/basics/booleans.h"
-#include "libft-graphics.h"
+#include "libft-graphics/3denv.h"
 
 static inline t_3dline	*env_create_line(t_3denv *env)
 {

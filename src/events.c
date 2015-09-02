@@ -6,14 +6,14 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/08/24 16:05:13 by ncoden            #+#    #+#             */
-/*   Updated: 2015/08/30 19:01:31 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/09/02 16:01:38 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "mlx.h"
 #include "libft/basics/numbers.h"
-#include "libft-graphics.h"
+#include "libft-graphics/3denv.h"
 
 static int		event_loop(t_3denv *env)
 {

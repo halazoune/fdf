@@ -6,12 +6,12 @@
 /*   By: ncoden <ncoden@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/14 12:46:18 by ncoden            #+#    #+#             */
-/*   Updated: 2015/08/30 19:00:12 by ncoden           ###   ########.fr       */
+/*   Updated: 2015/09/02 16:01:26 by ncoden           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
-#include "libft-graphics.h"
+#include "libft-graphics/3denv.h"
 #include "fdf.h"
 
 int				main(int argc, char **argv)
